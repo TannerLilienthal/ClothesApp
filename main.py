@@ -11,14 +11,38 @@ class OutfitLayout(FloatLayout):
         window_h = Window.height
         window_w = Window.width
 
+        # top right
         self.add_widget(
             Button(
                 text = ">",
-                size_hint = (0.1, 0.1),
-                pos = (window_w / 2, window_h / 2)
+                size_hint = (0.1, 0.05),
+                pos = (2 * window_w / 3, window_h / 5)
             )
         )
-
+        # top left
+        self.add_widget(
+            Button(
+                text = "<",
+                size_hint = (0.1, 0.05),
+                pos = ((window_w / 3) - (window_w * 0.1), window_h / 5)
+            )
+        )
+        # bottom right
+        self.add_widget(
+            Button(
+                text = ">",
+                size_hint = (0.1, 0.05),
+                pos = (2 * window_w / 3, 3 * window_h / 5)
+            )
+        )
+        # bottom left
+        self.add_widget(
+            Button(
+                text = "<",
+                size_hint = (0.1, 0.05),
+                pos = ((window_w / 3) - (window_w * 0.1), 3 * window_h / 5)
+            )
+        )
 
 
 class MainApp(App):
